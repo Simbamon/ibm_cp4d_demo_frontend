@@ -12,7 +12,7 @@ export class Navbar extends Component {
                     </NavLink>
                     <NavMenu>
                         <NavLink>
-                            <Search style = {{ fontSize: "1.5rem"}} />
+                            <Search />
                         </NavLink>
                         <NavLink>
                             <NotificationsNoneOutlined />
@@ -29,7 +29,7 @@ export class Navbar extends Component {
                                         <p style = {{fontSize: "0.65rem"}}>Admin</p>
                                     </div>
                                     <div style = {{display: "table-cell", verticalAlign: "middle"}}>
-                                        <ExpandMore style = {{ paddingLeft: "3px"}}/>
+                                        <ExpandMore style = {{paddingLeft: "5px", fontSize: "1.1rem"}} />
                                     </div>
                                 </ProfileName>
                             </Profile>
