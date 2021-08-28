@@ -15,13 +15,13 @@ export class Navbar extends Component {
                     </NavLink>
                     <NavMenu>
                         <NavLink>
-                            <Search />
+                            <Search style = {{fontSize: "1.35rem"}}/>
                         </NavLink>
-                        <NavLink to="/notification">
-                            <NotificationsNoneOutlined />
+                        <NavLink>
+                            <NotificationsNoneOutlined style = {{fontSize: "1.35rem"}}/>
                         </NavLink>
                         <NavLink to="/email">
-                            <Email />
+                            <Email style = {{fontSize: "1.35rem"}}/>
                         </NavLink>
                         <NavLink>
                             <Profile>
