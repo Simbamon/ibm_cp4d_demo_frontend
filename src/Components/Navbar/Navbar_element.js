@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 export const Nav = styled.nav`
-    background: #2d353c;
+    background: white;
     height: 50px;
     display: flex;
     justify-content: space-between;
@@ -10,7 +10,7 @@ export const Nav = styled.nav`
 `
 
 export const NavLink = styled(Link) `
-    color: #fff;
+    color: black;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -42,7 +42,6 @@ export const ProfilePic = styled.div`
 
 export const ProfileName = styled.div`
     margin-left: 8px;
-    margin-right: 30px;
     vertical-align: middle;
     display: table;
 `

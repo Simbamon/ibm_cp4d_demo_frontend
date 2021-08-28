@@ -1,5 +1,10 @@
 {
-    "test": {
+    "navbar": {
         "1": "John Doe"
+    },
+    "sidebar":{
+        "1": "Dashboard",
+        "2": "Client List",
+        "3": "Prediction"
     }
 }

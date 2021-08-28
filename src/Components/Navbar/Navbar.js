@@ -28,7 +28,7 @@ export class Navbar extends Component {
                                 <ProfilePic img = {require('../../images/profile_pic.png').default} alt='discovery workshop'></ProfilePic>
                                 <ProfileName>
                                     <div style = {{display: "table-cell", verticalAlign: "middle"}}>
-                                        <p style = {{fontSize: "0.85rem"}}>{t('test.1')}</p>
+                                        <p style = {{fontSize: "0.85rem"}}>{t('navbar.1')}</p>
                                         <p style = {{fontSize: "0.65rem"}}>Data Scientist</p>
                                     </div>
                                     <div style = {{display: "table-cell", verticalAlign: "middle"}}>

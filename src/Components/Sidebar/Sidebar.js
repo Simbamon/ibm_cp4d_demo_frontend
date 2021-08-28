@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { SideBar, SidebarWrapper, SidebarTitle, SidebarList, SidebarListItem, ProfileSection, ProfilePic } from './Sidebar_element'
+import { SideBar, SidebarWrapper, SidebarList, SidebarListItem, ProfileSection, ProfilePic } from './Sidebar_element'
 import { Dashboard, AssignmentInd, DesktopMac, KeyboardArrowRight } from '@material-ui/icons'
 import { withTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom'
@@ -16,17 +16,16 @@ export class Sidebar extends Component {
                                     <ProfilePic img = {require('../../images/profile_pic.png').default} alt='profile photo'></ProfilePic>
                                 </div>
                                 <div style={{paddingTop: "5px", paddingBottom: "15px", textAlign: "center" }}>
-                                    <p style={{color: "white", fontSize: "0.8rem", marginBottom:"2px"}}>홍길동</p>
+                                    <p style={{color: "white", fontSize: "0.8rem", marginBottom:"2px"}}>{t('navbar.1')}</p>
                                     <p style={{color: "#c5c7c9", fontSize: "0.6rem"}}>gildong@example.com</p>
                                 </div>
                                 
                             </ProfileSection>
-                            <SidebarTitle>Navigation</SidebarTitle>
                             <SidebarList>
                                 <Link to="/dashboard" style={{ textDecoration: 'none', color: '#555' }}>
                                     <SidebarListItem>
                                         <div style= {{display: "flex", alignItems: "center"}}>
-                                            <Dashboard style = {{paddingRight: "5px", paddingLeft: "20px"}}/>
+                                            <Dashboard style = {{paddingRight: "5px", paddingLeft: "10px"}}/>
                                             {t('sidebar.1')}
                                         </div>
                                         <KeyboardArrowRight />
@@ -35,7 +34,7 @@ export class Sidebar extends Component {
                                 <Link to="/client" style={{ textDecoration: 'none', color: '#555' }}>
                                     <SidebarListItem>
                                         <div style= {{display: "flex", alignItems: "center"}}>
-                                            <AssignmentInd style = {{paddingRight: "5px", paddingLeft: "20px"}}/>
+                                            <AssignmentInd style = {{paddingRight: "5px", paddingLeft: "10px"}}/>
                                             {t('sidebar.2')}
                                         </div>
                                         <KeyboardArrowRight />
@@ -44,7 +43,7 @@ export class Sidebar extends Component {
                                 <Link to="/prediction" style={{ textDecoration: 'none', color: '#555' }}>
                                     <SidebarListItem to="/prediction">
                                         <div style= {{display: "flex", alignItems: "center"}}>
-                                            <DesktopMac style = {{paddingRight: "5px", paddingLeft: "20px"}}/>
+                                            <DesktopMac style = {{paddingRight: "5px", paddingLeft: "10px"}}/>
                                             {t('sidebar.3')}
                                         </div>
                                         <KeyboardArrowRight />

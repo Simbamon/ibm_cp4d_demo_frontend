@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const SideBar = styled.div`
     min-height: calc(100vh - 50px);
     height: 100%;
-    width: 220px;
+    width: 200px;
 `
 
 export const SidebarWrapper = styled.div `
@@ -38,10 +38,10 @@ export const SidebarTitle = styled.p `
 export const SidebarList = styled.ul `
     list-style: none;
     cursor: pointer;
-    padding: 1px;
     font-size: 0.7rem;
     margin-left: -20px;
     margin-right: -20px;
+    margin-top: 20px;
 `
 
 export const SidebarListItem = styled.li `
