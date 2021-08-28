@@ -12,8 +12,8 @@ function App() {
       <div className="mainScreen">
         <Sidebar />
         <div className="contents">
-          <Route path="/" exact component={Dashboard} />
-          <Route path="/email" exact component={Prediction}/>
+          <Route path="/dashboard" exact component={Dashboard} />
+          <Route path="/prediction" exact component={Prediction}/>
         </div>
       </div>
       

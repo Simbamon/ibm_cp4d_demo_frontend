@@ -11,28 +11,49 @@ export const SidebarWrapper = styled.div `
     color : #555;
 
 `
-
-export const SidebarMenu = styled.div `
+export const ProfileSection = styled.div `
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(${props => props.img});
+    background-size: cover;
+    margin: -20px;
 
 `
 
+export const ProfilePic = styled.div`
+    background-image: url(${props => props.img});
+    background-size: cover;
+    width: 40px;
+    border-radius: 50%;
+    height: 40px;
+    text-decoration: none;
+`
+
 export const SidebarTitle = styled.p `
-    font-size: 0.8rem;
-    margin-bottom: 10px;
+    font-size: 0.7rem;
+    margin-top: 25px;
+    margin-bottom: 5px;
 `
 
 export const SidebarList = styled.ul `
     list-style: none;
     cursor: pointer;
     padding: 1px;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    margin-left: -20px;
+    margin-right: -20px;
 `
 
 export const SidebarListItem = styled.li `
     padding: 5px;
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    
     justify-content: space-between;
-    background-color: yellow;
+
+    &:hover {
+    transition: all 0.3s ease-out;
+    background-color: #1c2237;
+    color: #FFF;
+    }
 `
