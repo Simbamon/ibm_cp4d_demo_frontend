@@ -17,7 +17,7 @@ export class Sidebar extends Component {
                                 </div>
                                 <div style={{paddingTop: "5px", paddingBottom: "15px", textAlign: "center" }}>
                                     <p style={{color: "white", fontSize: "0.8rem", marginBottom:"2px"}}>{t('navbar.1')}</p>
-                                    <p style={{color: "#c5c7c9", fontSize: "0.6rem"}}>gildong@example.com</p>
+                                    <p style={{color: "#c5c7c9", fontSize: "0.6rem"}}>{t('sidebar.4')}</p>
                                 </div>
                                 
                             </ProfileSection>

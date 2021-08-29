@@ -5,6 +5,7 @@
     "sidebar":{
         "1": "Dashboard",
         "2": "Client List",
-        "3": "Prediction"
+        "3": "Prediction",
+        "4": "john.doe@example.com"
     }
 }
