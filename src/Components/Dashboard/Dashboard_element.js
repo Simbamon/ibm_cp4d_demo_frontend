@@ -22,8 +22,16 @@ export const BoxInfo = styled.div`
 
 export const BoxItem = styled.div`
     flex: 1;
-    background-color: blue;
-    margin : 0px 10px;
-    padding: 30px;
+    margin : 10px;
+    padding: 15px;
+    border-radius: 10px;
     white-space: nowrap;
+    background-color: white;
+`
+
+export const BoxTrend = styled.div`
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    border-radius: 3px;
 `
