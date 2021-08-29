@@ -27,6 +27,7 @@ export const BoxItem = styled.div`
     border-radius: 10px;
     white-space: nowrap;
     background-color: white;
+    box-shadow: 13px 15px 55px -13px rgba(0,0,0,0.36);
 `
 
 export const BoxTrend = styled.div`

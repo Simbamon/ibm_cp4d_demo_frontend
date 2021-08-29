@@ -10,7 +10,7 @@ export class Navbar extends Component {
         return (
             <>
                 <Nav>
-                    <NavLink to="/">
+                    <NavLink to="/dashboard">
                         <h1>TITLE</h1>
                     </NavLink>
                     <NavMenu>
@@ -20,7 +20,7 @@ export class Navbar extends Component {
                         <NavLink>
                             <NotificationsNoneOutlined style = {{fontSize: "1.35rem"}}/>
                         </NavLink>
-                        <NavLink to="/email">
+                        <NavLink>
                             <Email style = {{fontSize: "1.35rem"}}/>
                         </NavLink>
                         <NavLink>

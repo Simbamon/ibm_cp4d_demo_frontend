@@ -2,10 +2,18 @@
     "navbar": {
         "1": "John Doe"
     },
-    "sidebar":{
+    "sidebar": {
         "1": "Dashboard",
         "2": "Client List",
         "3": "Prediction",
         "4": "john.doe@example.com"
+    },
+    "dashboard": {
+        "1": "Total Clients",
+        "2": "Total Revenue",
+        "3": "Potential Offers",
+        "4": "Total Sales",
+        "5": "$30,217",
+        "6": "compared to last month"
     }
 }
