@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { DashboardWrap, DashboardTitle, BoxInfo, BoxItem, BoxTrend } from './Dashboard_element'
+import { DashboardWrap, DashboardTitle, BoxInfo, BoxItem, BoxTrend, TopFive, TopFiveBox, PieChart } from './Dashboard_element'
 import { ArrowDownward, ArrowUpward, Person, ShowChart, QuestionAnswer, Assignment } from '@material-ui/icons'
 import { withTranslation } from 'react-i18next';
 
@@ -9,8 +9,9 @@ export class Dashboard extends Component {
         return (
             <>
             <DashboardWrap>
-                <h1>Dashbaord</h1>
+                
                 <DashboardTitle>
+                <h1>Dashbaord</h1>
                 </DashboardTitle>
                 <BoxInfo>
                         <BoxItem>
@@ -89,6 +90,32 @@ export class Dashboard extends Component {
                             </div>
                         </BoxItem>
                     </BoxInfo>
+                    <TopFive>
+                        
+                        <TopFiveBox>
+                            <thead>
+                                <tr>
+                                    <th>Customer ID</th>
+                                    <th>클라이언트</th>
+                                    <th>Email</th>
+                                    <th>Recent Offer</th>
+                                    <th>구매여부</th>
+                                    <th>Predict</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <td>1024</td>
+                                <td>adsf</td>
+                                <td>example@example.com</td>
+                                <td>adsf</td>
+                                
+                            </tbody>
+                        </TopFiveBox>
+                        <PieChart>
+
+                        </PieChart>
+                    </TopFive>
+
             </DashboardWrap>
                 
             </>
