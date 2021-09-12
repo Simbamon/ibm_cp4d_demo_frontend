@@ -47,8 +47,8 @@ export const TopFive = styled.div `
     margin-top: 10px;
 `
 
-export const TopFiveBox = styled.div`
-    flex: 67%;
+export const DashboardTable = styled.div`
+    flex: 65%;
     margin : 10px;
     border-radius: 10px;
     white-space: nowrap;
@@ -66,9 +66,11 @@ export const TopFiveBox = styled.div`
     margin-bottom: 25px;
 
     caption {
-        font-size: large;
+        display: inline;
+        font-size: 1.1rem;
+        font-weight: bold;
         padding: 5px 0 5px 20px;
-        height: 45px;
+        line-height: 45px;
     }
 
     thead tr th {
@@ -137,6 +139,8 @@ export const Purchase = styled.div`
 export const Predict = styled.div`
     display: inline;
     width: 100%;
+    font-size: 0.75rem;
+    font-weight: bold;
     border: 0.1rem solid blue;
     color: blue;
     padding: 5px 10px 5px 10px;
@@ -154,9 +158,26 @@ export const Predict = styled.div`
 export const PieChart = styled.div`
     flex: 20%;
     margin : 10px;
-    padding: 15px;
-    border-radius: 15px;
+    border-radius: 10px;
     white-space: nowrap;
     background-color: white;
     box-shadow: 13px 15px 55px -13px rgba(0,0,0,0.36);
+    flex-direction: row;
+    flex-direction: column;
+    text-align: left;
+    font-size: 0.85rem;
+    height: 100%;
+    width: 100%;
+    display: table;
+    table-layout: auto;
+    margin-top: 15px;
+    margin-bottom: 25px;
+
+    caption {
+        display: inline;
+        font-size: 1.1rem;
+        font-weight: bold;
+        padding: 5px 0 5px 20px;
+        line-height: 45px;
+    }
 `

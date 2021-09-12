@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { DashboardWrap, DashboardTitle, BoxInfo, BoxItem, BoxTrend, TopFive, TopFiveBox, 
+import { DashboardWrap, DashboardTitle, BoxInfo, BoxItem, BoxTrend, TopFive, DashboardTable, 
          Client, ClientPic, ClientName, Purchase, Predict, PieChart } from './Dashboard_element'
 import { ArrowDownward, ArrowUpward, Person, ShowChart, QuestionAnswer, Assignment } from '@material-ui/icons'
 import { withTranslation } from 'react-i18next';
@@ -105,7 +105,7 @@ export class Dashboard extends Component {
                         </BoxItem>
                     </BoxInfo>
                     <TopFive>
-                        <TopFiveBox>
+                        <DashboardTable>
                             <thead>
                                 <caption>{t('table.1')}</caption>
                                 <tr>
@@ -131,7 +131,7 @@ export class Dashboard extends Component {
                                         </Client>
                                     </td>
                                     <td>{t('client.1e')}</td>
-                                    <td>주택담보</td>
+                                    <td>{t('product.1')}</td>
                                     <td>
                                         <Purchase>
                                             <FiberManualRecord style = {{paddingRight: "5px", color: "#23BF08", fontSize: "small"}} />
@@ -157,7 +157,7 @@ export class Dashboard extends Component {
                                         </Client>
                                     </td>
                                     <td>{t('client.2e')}</td>
-                                    <td>저축보험</td>
+                                    <td>{t('product.2')}</td>
                                     <td>
                                         <Purchase>
                                             <FiberManualRecord style = {{paddingRight: "5px", color: "#23BF08", fontSize: "small"}} />
@@ -183,7 +183,7 @@ export class Dashboard extends Component {
                                         </Client>
                                     </td>
                                     <td>{t('client.3e')}</td>
-                                    <td>연금보험</td>
+                                    <td>{t('product.3')}</td>
                                     <td>
                                         <Purchase>
                                             <FiberManualRecord style = {{paddingRight: "5px", color: "#E83E8C", fontSize: "small"}} />
@@ -209,7 +209,7 @@ export class Dashboard extends Component {
                                         </Client>
                                     </td>
                                     <td>{t('client.4e')}</td>
-                                    <td>자녀보험</td>
+                                    <td>{t('product.4')}</td>
                                     <td>
                                         <Purchase>
                                             <FiberManualRecord style = {{paddingRight: "5px", color: "#23BF08", fontSize: "small"}} />
@@ -235,7 +235,7 @@ export class Dashboard extends Component {
                                         </Client>
                                     </td>
                                     <td>{t('client.5e')}</td>
-                                    <td>연금보험</td>
+                                    <td>{t('product.3')}</td>
                                     <td>
                                         <Purchase>
                                             <FiberManualRecord style = {{paddingRight: "5px", color: "#E83E8C", fontSize: "small"}} />
@@ -249,9 +249,26 @@ export class Dashboard extends Component {
                                     </td>
                                 </tr>
                             </tbody>
-                        </TopFiveBox>
+                        </DashboardTable>
                         <PieChart>
-
+                            <thead>
+                                <caption>Total Sales by Products</caption>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1024</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>1024</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>1024</td>
+                                    
+                                </tr>
+                              
+                            </tbody>
                         </PieChart>
                     </TopFive>
 

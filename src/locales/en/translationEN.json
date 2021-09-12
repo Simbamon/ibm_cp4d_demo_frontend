@@ -39,5 +39,12 @@
         "3e": "jfarrar941@gmail.com",
         "4e": "allison0302@yahoo.com",
         "5e": "burkholder939@gmail.com"
+    },
+    "product": {
+        "1": "Mortgage",
+        "2": "Savings Insurance",
+        "3": "Pension Insurance",
+        "4": "Child Insurance",
+        "5": "Retirement Care Insurance"
     }
 }
