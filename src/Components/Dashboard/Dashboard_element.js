@@ -57,7 +57,7 @@ export const TopFiveBox = styled.div`
     flex-direction: row;
     flex-direction: column;
     text-align: left;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     height: 100%;
     width: 100%;
     display: table;
@@ -65,26 +65,41 @@ export const TopFiveBox = styled.div`
     margin-top: 15px;
     margin-bottom: 25px;
 
+    caption {
+        font-size: large;
+        padding: 5px 0 5px 20px;
+        height: 45px;
+    }
+
     thead tr th {
         border: none;
+        background-color: #2c333c;
+        color: #FFF;
         font-weight: bold;
         border-top: 1px solid #c8c8c8;
         border-bottom: 1px solid #c8c8c8;
         
     }
-    tbody tr td:first-child {
+    thead tr th:first-child,
+    thead tr th:nth-child(5){
+        width: 90px;
     }
+    thead tr th:first-child,
     thead tr th:nth-child(4),
-    thead tr th:nth-child(5),
     thead tr th:nth-child(6) {
         text-align: center;
     }
+    tbody tr td:first-child,
     tbody tr td:nth-child(4),
-    tbody tr td:nth-child(5),
     tbody tr td:nth-child(6) {
         text-align: center;
     }
-    th, td  {
+    th {
+        padding: 5px 20px;
+        height: 30px;
+        border-bottom: 1px solid #c8c8c8;
+    }
+    td  {
         padding: 5px 20px;
         height: 45px;
         border-bottom: 1px solid #c8c8c8;
@@ -114,14 +129,33 @@ export const ClientName = styled.div`
 `
 
 export const Purchase = styled.div`
+    display: table-cell;
+    vertical-align: middle;
+
+`
+
+export const Predict = styled.div`
+    display: inline;
     width: 100%;
+    border: 0.1rem solid blue;
+    color: blue;
+    padding: 5px 10px 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+
+    &:hover {
+        transition: all 0.3s ease-out;
+        background: blue;
+        color: white;
+    }
+    
 `
 
 export const PieChart = styled.div`
     flex: 20%;
     margin : 10px;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 15px;
     white-space: nowrap;
     background-color: white;
     box-shadow: 13px 15px 55px -13px rgba(0,0,0,0.36);

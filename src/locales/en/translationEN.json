@@ -15,5 +15,17 @@
         "4": "Total Sales",
         "5": "$30,217",
         "6": "compared to last month"
+    },
+    "table": {
+        "1": "Top 5 Clients",
+        "2": "Client ID",
+        "3": "Client",
+        "4": "Email",
+        "5": "Recently Offered Product",
+        "6": "Purchased",
+        "7": "ML Model",
+        "8": "Purchased",
+        "9": "Not Purchased",
+        "10": "Predict"
     }
 }

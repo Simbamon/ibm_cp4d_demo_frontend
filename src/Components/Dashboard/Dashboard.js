@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import { DashboardWrap, DashboardTitle, BoxInfo, BoxItem, BoxTrend, TopFive, TopFiveBox, 
-         Client, ClientPic, ClientName, Purchase, PieChart } from './Dashboard_element'
+         Client, ClientPic, ClientName, Purchase, Predict, PieChart } from './Dashboard_element'
 import { ArrowDownward, ArrowUpward, Person, ShowChart, QuestionAnswer, Assignment } from '@material-ui/icons'
 import { withTranslation } from 'react-i18next';
-import imageEN from '../../images/clientEN.jpg';
-import imageKR from '../../images/clientKR.jpg';
+import { FiberManualRecord } from '@material-ui/icons'
+import Client1KR from '../../images/client1KR.jpg';
+import Client1EN from '../../images/client1EN.jpg';
+
 
 export class Dashboard extends Component {
     render() {
@@ -94,18 +96,16 @@ export class Dashboard extends Component {
                         </BoxItem>
                     </BoxInfo>
                     <TopFive>
-                        
                         <TopFiveBox>
-                            
                             <thead>
-                                <h1>asdfadsf</h1>
+                                <caption>{t('table.1')}</caption>
                                 <tr>
-                                    <th>Customer ID</th>
-                                    <th>클라이언트</th>
-                                    <th>Email</th>
-                                    <th>최근 오퍼된 상품</th>
-                                    <th>구매여부</th>
-                                    <th>Predict</th>
+                                    <th>{t('table.2')}</th>
+                                    <th>{t('table.3')}</th>
+                                    <th>{t('table.4')}</th>
+                                    <th>{t('table.5')}</th>
+                                    <th>{t('table.6')}</th>
+                                    <th>{t('table.7')}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -114,7 +114,7 @@ export class Dashboard extends Component {
                                     <td>
                                         <Client>
                                             {/* <img src={localStorage.getItem('i18nextLng')==="en" ?imageEN : imageKR}/> */}
-                                            <ClientPic img = {localStorage.getItem('i18nextLng')==="en" ?imageEN : imageKR} alt='discovery workshop'></ClientPic>
+                                            <ClientPic img = {localStorage.getItem('i18nextLng')==="ko" ?Client1KR : Client1EN} alt='discovery workshop'></ClientPic>
                                             <ClientName>
                                                 <div style = {{display: "table-cell", verticalAlign: "middle"}}>
                                                     <p style = {{fontSize: "0.85rem"}}>{t('navbar.1')}</p>
@@ -125,15 +125,15 @@ export class Dashboard extends Component {
                                     <td>example@example.com</td>
                                     <td>주택담보</td>
                                     <td>
-                                        비구매
+                                        <Purchase>
+                                            <FiberManualRecord style = {{paddingRight: "5px", color: "#23BF08", fontSize: "small"}} />
+                                        </Purchase>
+                                        <Purchase>
+                                            {t('table.8')}
+                                        </Purchase>
                                     </td>
                                     <td>
-                                        <Purchase>
-                                            <div style = {{backgroundColor: "red"}}>
-                                                예측하기
-                                            </div>
-                                            
-                                        </Purchase>
+                                        <Predict>{t('table.10')}</Predict>
                                     </td>
                                 </tr>
                                 <tr>
@@ -141,35 +141,69 @@ export class Dashboard extends Component {
                                     <td>adsf</td>
                                     <td>example@example.com</td>
                                     <td>저축보험</td>
-                                    <td>비구매</td>
-                                    <td>afdsaf</td>
+                                    <td>
+                                        <Purchase>
+                                            <FiberManualRecord style = {{paddingRight: "5px", color: "#23BF08", fontSize: "small"}} />
+                                        </Purchase>
+                                        <Purchase>
+                                            {t('table.8')}
+                                        </Purchase>
+                                    </td>
+                                    <td>
+                                        <Predict>{t('table.10')}</Predict>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>1055</td>
                                     <td>adsf</td>
                                     <td>example@example.com</td>
                                     <td>연금보험</td>
-                                    <td>구매</td>
-                                    <td>afdsaf</td>
+                                    <td>
+                                        <Purchase>
+                                            <FiberManualRecord style = {{paddingRight: "5px", color: "#E83E8C", fontSize: "small"}} />
+                                        </Purchase>
+                                        <Purchase>
+                                            {t('table.9')}
+                                        </Purchase>
+                                    </td>
+                                    <td>
+                                        <Predict>{t('table.10')}</Predict>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>1202</td>
                                     <td>adsf</td>
                                     <td>example@example.com</td>
                                     <td>자녀보험</td>
-                                    <td>구매</td>
-                                    <td>afdsaf</td>
+                                    <td>
+                                        <Purchase>
+                                            <FiberManualRecord style = {{paddingRight: "5px", color: "#23BF08", fontSize: "small"}} />
+                                        </Purchase>
+                                        <Purchase>
+                                            {t('table.8')}
+                                        </Purchase>
+                                    </td>
+                                    <td>
+                                        <Predict>{t('table.10')}</Predict>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>1729</td>
                                     <td>adsf</td>
                                     <td>example@example.com</td>
                                     <td>연금보험</td>
-                                    <td>Not Purchased</td>
-                                    <td>afdsaf</td>
+                                    <td>
+                                        <Purchase>
+                                            <FiberManualRecord style = {{paddingRight: "5px", color: "#E83E8C", fontSize: "small"}} />
+                                        </Purchase>
+                                        <Purchase>
+                                            {t('table.9')}
+                                        </Purchase>
+                                    </td>
+                                    <td>
+                                        <Predict>{t('table.10')}</Predict>
+                                    </td>
                                 </tr>
-                                
-                                
                             </tbody>
                         </TopFiveBox>
                         <PieChart>
