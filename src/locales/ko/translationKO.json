@@ -27,5 +27,17 @@
         "8": "구매",
         "9": "구매하지 않음",
         "10": "예측하기"
+    },
+    "client": {
+        "1": "정한결",
+        "2": "정유리",
+        "3": "신승헌",
+        "4": "표경택",
+        "5": "최나영",
+        "1e": "ssjhk2930@naver.com",
+        "2e": "yuri.jeong29@gmail.com",
+        "3e": "shs39010@naver.com",
+        "4e": "ppyo1020@gmail.com",
+        "5e": "nychoi50@naver.com"
     }
 }

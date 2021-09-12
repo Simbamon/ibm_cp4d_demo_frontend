@@ -27,5 +27,17 @@
         "8": "Purchased",
         "9": "Not Purchased",
         "10": "Predict"
+    },
+    "client": {
+        "1": "Catherine M. Wood",
+        "2": "Justin T. Purvis",
+        "3": "Jason P. Farrar",
+        "4": "Alison B. Sevilla",
+        "5": "Lisa J. Burkholder",
+        "1e": "cat.wood.182@gmail.com",
+        "2e": "justin3049@yahoo.com",
+        "3e": "jfarrar941@gmail.com",
+        "4e": "allison0302@yahoo.com",
+        "5e": "burkholder939@gmail.com"
     }
 }
