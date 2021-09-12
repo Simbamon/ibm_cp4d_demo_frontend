@@ -3,7 +3,8 @@ import { DashboardWrap, DashboardTitle, BoxInfo, BoxItem, BoxTrend, TopFive, Das
          Client, ClientPic, ClientName, Purchase, Predict, PieChart } from './Dashboard_element'
 import { ArrowDownward, ArrowUpward, Person, ShowChart, QuestionAnswer, Assignment } from '@material-ui/icons'
 import { withTranslation } from 'react-i18next';
-import { FiberManualRecord } from '@material-ui/icons'
+import { FiberManualRecord, Stop } from '@material-ui/icons'
+import { Doughnut } from 'react-chartjs-2'
 import Client1KR from '../../images/client1KR.jpg';
 import Client2KR from '../../images/client2KR.jpg';
 import Client3KR from '../../images/client3KR.jpg';
@@ -19,7 +20,9 @@ import Client5EN from '../../images/client5EN.jpg';
 
 export class Dashboard extends Component {
     render() {
+
         const { t } = this.props;
+
         return (
             <>
             <DashboardWrap>
@@ -250,28 +253,91 @@ export class Dashboard extends Component {
                                 </tr>
                             </tbody>
                         </DashboardTable>
+                        
                         <PieChart>
                             <thead>
-                                <caption>Total Sales by Products</caption>
+                                <caption>{t('piechart.1')}</caption>
+                                <tr>
+                                    <th>
+                                    <Doughnut
+                                        data ={{datasets: [{data: [10, 6, 5, 6, 7],
+                                                            backgroundColor: ['#00A6FF', '#28A745', '#DC3545', '#FFC107', '#8107FF']}]}}
+                                        options={{maintainAspectRatio: false, cutout: 55}}
+                                        />
+                                    </th>
+                                </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>1024</td>
-                                    
+                                    <td>
+                                        <div>
+                                        <Purchase>
+                                            <Stop style = {{paddingRight: "1px", color: "#00A6FF", fontSize: "0.8rem"}} />
+                                        </Purchase>
+                                        <Purchase>
+                                        {t('product.1')}
+                                        </Purchase>
+                                        </div>
+                                        {t('piechart.2')}
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>1024</td>
-                                    
+                                    <td>
+                                        <div>
+                                        <Purchase>
+                                            <Stop style = {{paddingRight: "1px", color: "#28A745", fontSize: "0.8rem"}} />
+                                        </Purchase>
+                                        <Purchase>
+                                        {t('product.2')}
+                                        </Purchase>
+                                        </div>
+                                        {t('piechart.3')}
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>1024</td>
-                                    
+                                    <td>
+                                        <div>
+                                        <Purchase>
+                                            <Stop style = {{paddingRight: "1px", color: "#DC3545", fontSize: "0.8rem"}} />
+                                        </Purchase>
+                                        <Purchase>
+                                        {t('product.3')}
+                                        </Purchase>
+                                        </div>
+                                        {t('piechart.4')}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>
+                                        <Purchase>
+                                            <Stop style = {{paddingRight: "1px", color: "#FFC107", fontSize: "0.8rem"}} />
+                                        </Purchase>
+                                        <Purchase>
+                                        {t('product.4')}
+                                        </Purchase>
+                                        </div>
+                                        {t('piechart.5')}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>
+                                        <Purchase>
+                                            <Stop style = {{paddingRight: "1px", color: "#8107FF", fontSize: "0.8rem"}} />
+                                        </Purchase>
+                                        <Purchase>
+                                        {t('product.5')}
+                                        </Purchase>
+                                        </div>
+                                        {t('piechart.6')}
+                                    </td>
                                 </tr>
                               
                             </tbody>
                         </PieChart>
                     </TopFive>
-
+                    
             </DashboardWrap>
                 
             </>

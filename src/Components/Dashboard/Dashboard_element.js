@@ -39,6 +39,7 @@ export const BoxTrend = styled.div`
 
 export const TopFive = styled.div `
     width: 100%;
+    min-height: 380px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -47,23 +48,23 @@ export const TopFive = styled.div `
     margin-top: 10px;
 `
 
+
 export const DashboardTable = styled.div`
-    flex: 65%;
+    flex: 1 1 75%;
     margin : 10px;
     border-radius: 10px;
     white-space: nowrap;
     background-color: white;
-    box-shadow: 13px 15px 55px -13px rgba(0,0,0,0.36);
-    flex-direction: row;
-    flex-direction: column;
     text-align: left;
     font-size: 0.85rem;
     height: 100%;
     width: 100%;
     display: table;
-    table-layout: auto;
     margin-top: 15px;
     margin-bottom: 25px;
+    border-collapse: collapse;
+    overflow-x:auto;
+    box-shadow: 13px 15px 55px -13px rgba(0,0,0,0.36);
 
     caption {
         display: inline;
@@ -156,8 +157,8 @@ export const Predict = styled.div`
 `
 
 export const PieChart = styled.div`
-    flex: 20%;
-    margin : 10px;
+    flex: 1 1 20%;
+    margin: 10px;
     border-radius: 10px;
     white-space: nowrap;
     background-color: white;
@@ -169,7 +170,7 @@ export const PieChart = styled.div`
     height: 100%;
     width: 100%;
     display: table;
-    table-layout: auto;
+    table-layout: fixed;
     margin-top: 15px;
     margin-bottom: 25px;
 
@@ -179,5 +180,15 @@ export const PieChart = styled.div`
         font-weight: bold;
         padding: 5px 0 5px 20px;
         line-height: 45px;
+    }
+    th {
+        padding: 5px 20px;
+        height: 210px;
+    }
+    td  {
+        display: flex;
+        justify-content: space-between;
+        padding: 2px 20px;
+        line-height: 1rem;
     }
 `

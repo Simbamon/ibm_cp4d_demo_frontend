@@ -46,5 +46,13 @@
         "3": "Pension Insurance",
         "4": "Child Insurance",
         "5": "Retirement Care Insurance"
+    },
+    "piechart": {
+        "1": "Total Sales Revenue by Products",
+        "2": "$321",
+        "3": "$295",
+        "4": "$227",
+        "5": "$258",
+        "6": "$303"
     }
 }
