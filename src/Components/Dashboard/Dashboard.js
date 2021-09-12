@@ -262,7 +262,7 @@ export class Dashboard extends Component {
                                     <Doughnut
                                         data ={{datasets: [{data: [10, 6, 5, 6, 7],
                                                             backgroundColor: ['#00A6FF', '#28A745', '#DC3545', '#FFC107', '#8107FF']}]}}
-                                        options={{maintainAspectRatio: false, cutout: 55}}
+                                        options={{maintainAspectRatio: false, cutout: 70}}
                                         />
                                     </th>
                                 </tr>
