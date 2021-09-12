@@ -50,7 +50,6 @@ export const TopFive = styled.div `
 export const TopFiveBox = styled.div`
     flex: 67%;
     margin : 10px;
-    padding: 15px;
     border-radius: 10px;
     white-space: nowrap;
     background-color: white;
@@ -62,10 +61,60 @@ export const TopFiveBox = styled.div`
     height: 100%;
     width: 100%;
     display: table;
+    table-layout: auto;
     margin-top: 15px;
     margin-bottom: 25px;
-    table-layout: fixed;
+
+    thead tr th {
+        border: none;
+        font-weight: bold;
+        border-top: 1px solid #c8c8c8;
+        border-bottom: 1px solid #c8c8c8;
+        
+    }
+    tbody tr td:first-child {
+    }
+    thead tr th:nth-child(4),
+    thead tr th:nth-child(5),
+    thead tr th:nth-child(6) {
+        text-align: center;
+    }
+    tbody tr td:nth-child(4),
+    tbody tr td:nth-child(5),
+    tbody tr td:nth-child(6) {
+        text-align: center;
+    }
+    th, td  {
+        padding: 5px 20px;
+        height: 45px;
+        border-bottom: 1px solid #c8c8c8;
+    }
     
+`
+
+export const Client = styled.div`
+    display: flex;
+    
+`
+
+export const ClientPic = styled.div`
+    background-image: url(${props => props.img});
+    background-size: cover;
+    width: 30px;
+    border-radius: 50%;
+    height: 30px;
+    text-decoration: none;
+ 
+`
+
+export const ClientName = styled.div`
+    margin-left: 5px;
+    vertical-align: middle;
+    display: table;
+`
+
+export const Purchase = styled.div`
+    width: 100%;
 `
 
 export const PieChart = styled.div`

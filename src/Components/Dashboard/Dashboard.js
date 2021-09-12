@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
-import { DashboardWrap, DashboardTitle, BoxInfo, BoxItem, BoxTrend, TopFive, TopFiveBox, PieChart } from './Dashboard_element'
+import { DashboardWrap, DashboardTitle, BoxInfo, BoxItem, BoxTrend, TopFive, TopFiveBox, 
+         Client, ClientPic, ClientName, Purchase, PieChart } from './Dashboard_element'
 import { ArrowDownward, ArrowUpward, Person, ShowChart, QuestionAnswer, Assignment } from '@material-ui/icons'
 import { withTranslation } from 'react-i18next';
+import imageEN from '../../images/clientEN.jpg';
+import imageKR from '../../images/clientKR.jpg';
 
 export class Dashboard extends Component {
     render() {
-        const { t } = this.props; 
+        const { t } = this.props;
         return (
             <>
             <DashboardWrap>
@@ -93,21 +96,79 @@ export class Dashboard extends Component {
                     <TopFive>
                         
                         <TopFiveBox>
+                            
                             <thead>
+                                <h1>asdfadsf</h1>
                                 <tr>
                                     <th>Customer ID</th>
                                     <th>클라이언트</th>
                                     <th>Email</th>
-                                    <th>Recent Offer</th>
+                                    <th>최근 오퍼된 상품</th>
                                     <th>구매여부</th>
                                     <th>Predict</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <td>1024</td>
-                                <td>adsf</td>
-                                <td>example@example.com</td>
-                                <td>adsf</td>
+                                <tr>
+                                    <td>1024</td>
+                                    <td>
+                                        <Client>
+                                            {/* <img src={localStorage.getItem('i18nextLng')==="en" ?imageEN : imageKR}/> */}
+                                            <ClientPic img = {localStorage.getItem('i18nextLng')==="en" ?imageEN : imageKR} alt='discovery workshop'></ClientPic>
+                                            <ClientName>
+                                                <div style = {{display: "table-cell", verticalAlign: "middle"}}>
+                                                    <p style = {{fontSize: "0.85rem"}}>{t('navbar.1')}</p>
+                                                </div>
+                                            </ClientName>
+                                        </Client>
+                                    </td>
+                                    <td>example@example.com</td>
+                                    <td>주택담보</td>
+                                    <td>
+                                        비구매
+                                    </td>
+                                    <td>
+                                        <Purchase>
+                                            <div style = {{backgroundColor: "red"}}>
+                                                예측하기
+                                            </div>
+                                            
+                                        </Purchase>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1031</td>
+                                    <td>adsf</td>
+                                    <td>example@example.com</td>
+                                    <td>저축보험</td>
+                                    <td>비구매</td>
+                                    <td>afdsaf</td>
+                                </tr>
+                                <tr>
+                                    <td>1055</td>
+                                    <td>adsf</td>
+                                    <td>example@example.com</td>
+                                    <td>연금보험</td>
+                                    <td>구매</td>
+                                    <td>afdsaf</td>
+                                </tr>
+                                <tr>
+                                    <td>1202</td>
+                                    <td>adsf</td>
+                                    <td>example@example.com</td>
+                                    <td>자녀보험</td>
+                                    <td>구매</td>
+                                    <td>afdsaf</td>
+                                </tr>
+                                <tr>
+                                    <td>1729</td>
+                                    <td>adsf</td>
+                                    <td>example@example.com</td>
+                                    <td>연금보험</td>
+                                    <td>Not Purchased</td>
+                                    <td>afdsaf</td>
+                                </tr>
+                                
                                 
                             </tbody>
                         </TopFiveBox>
