@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { DashboardWrap, DashboardTitle, BoxInfo, BoxItem, BoxTrend, TopFive, DashboardTable, 
-         Client, ClientPic, ClientName, Purchase, Predict, PieChart } from './Dashboard_element'
+         Client, ClientPic, ClientName, Purchase, Predict, PieChart, Graphs, BarGraph } from './Dashboard_element'
 import { ArrowDownward, ArrowUpward, Person, ShowChart, QuestionAnswer, Assignment } from '@material-ui/icons'
 import { withTranslation } from 'react-i18next';
 import { FiberManualRecord, Stop } from '@material-ui/icons'
@@ -28,7 +28,7 @@ export class Dashboard extends Component {
             <DashboardWrap>
                 
                 <DashboardTitle>
-                <h1>Dashbaord</h1>
+                {t('sidebar.1')}
                 </DashboardTitle>
                 <BoxInfo>
                         <BoxItem>
@@ -337,7 +337,50 @@ export class Dashboard extends Component {
                             </tbody>
                         </PieChart>
                     </TopFive>
-                    
+                    <Graphs>
+                        <BarGraph>
+                            <thead>
+                                <caption>{t('piechart.1')}</caption>
+                                <tr>
+                                    <th>
+                                    <Doughnut
+                                        data ={{datasets: [{data: [10, 6, 5, 6, 7],
+                                                            backgroundColor: ['#00A6FF', '#28A745', '#DC3545', '#FFC107', '#8107FF']}]}}
+                                        options={{maintainAspectRatio: false, cutout: 70}}
+                                        />
+                                    </th>
+                                </tr>
+                            </thead>
+                        </BarGraph>
+                        <BarGraph>
+                            <thead>
+                                <caption>{t('piechart.1')}</caption>
+                                <tr>
+                                    <th>
+                                    <Doughnut
+                                        data ={{datasets: [{data: [10, 6, 5, 6, 7],
+                                                            backgroundColor: ['#00A6FF', '#28A745', '#DC3545', '#FFC107', '#8107FF']}]}}
+                                        options={{maintainAspectRatio: false, cutout: 70}}
+                                        />
+                                    </th>
+                                </tr>
+                            </thead>
+                        </BarGraph>
+                        <BarGraph>
+                            <thead>
+                                <caption>{t('piechart.1')}</caption>
+                                <tr>
+                                    <th>
+                                    <Doughnut
+                                        data ={{datasets: [{data: [10, 6, 5, 6, 7],
+                                                            backgroundColor: ['#00A6FF', '#28A745', '#DC3545', '#FFC107', '#8107FF']}]}}
+                                        options={{maintainAspectRatio: false, cutout: 70}}
+                                        />
+                                    </th>
+                                </tr>
+                            </thead>
+                        </BarGraph>
+                    </Graphs>
             </DashboardWrap>
                 
             </>

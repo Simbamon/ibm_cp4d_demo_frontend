@@ -9,6 +9,8 @@ export const DashboardWrap = styled.div`
 
 export const DashboardTitle = styled.div`
     padding: 10px;
+    font-size: 1.7rem;
+    font-weight: bold;
 `
 
 export const BoxInfo = styled.div`
@@ -158,6 +160,53 @@ export const Predict = styled.div`
 
 export const PieChart = styled.div`
     flex: 1 1 20%;
+    margin: 10px;
+    border-radius: 10px;
+    white-space: nowrap;
+    background-color: white;
+    box-shadow: 13px 15px 55px -13px rgba(0,0,0,0.36);
+    flex-direction: row;
+    flex-direction: column;
+    text-align: left;
+    font-size: 0.85rem;
+    height: 100%;
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    margin-top: 15px;
+    margin-bottom: 25px;
+
+    caption {
+        display: inline;
+        font-size: 1.1rem;
+        font-weight: bold;
+        padding: 5px 0 5px 20px;
+        line-height: 45px;
+    }
+    th {
+        padding: 5px 20px;
+        height: 210px;
+    }
+    td  {
+        display: flex;
+        justify-content: space-between;
+        padding: 2px 20px;
+        line-height: 1rem;
+    }
+`
+
+export const Graphs = styled.div `
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    margin-top: 10px;
+`
+
+export const BarGraph = styled.div`
+    flex: 1 1 27%;
     margin: 10px;
     border-radius: 10px;
     white-space: nowrap;
