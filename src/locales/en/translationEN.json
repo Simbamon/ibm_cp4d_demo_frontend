@@ -54,5 +54,14 @@
         "4": "$227",
         "5": "$258",
         "6": "$303"
-    }
+    },
+    "days": {
+        "sun": "Sun",
+        "mon": "Mon",
+        "tue": "Tue",
+        "wed": "Wed",
+        "thu": "Thur",
+        "fri": "Fri",
+        "sat": "Sat"
+      }
 }

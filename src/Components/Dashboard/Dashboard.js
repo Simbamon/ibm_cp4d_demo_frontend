@@ -260,9 +260,15 @@ export class Dashboard extends Component {
                                 <tr>
                                     <th>
                                     <Doughnut
-                                        data ={{datasets: [{data: [10, 6, 5, 6, 7],
-                                                            backgroundColor: ['#00A6FF', '#28A745', '#DC3545', '#FFC107', '#8107FF']}]}}
-                                        options={{maintainAspectRatio: false, cutout: 70}}
+                                        data ={{labels: [t('product.1'), t('product.2'), t('product.3'), t('product.4'), t('product.5')],
+                                                datasets: [{data: [10, 6, 5, 6, 7],
+                                                backgroundColor: ['#00A6FF', '#28A745', '#DC3545', '#FFC107', '#8107FF']}]}}
+                                        options={{plugins: {
+                                            legend: {
+                                                display: false
+                                            }
+                                        },
+                                        maintainAspectRatio: false, cutout: 70}}
                                         />
                                     </th>
                                 </tr>
@@ -344,13 +350,16 @@ export class Dashboard extends Component {
                                 <tr>
                                     <th>
                                     <Bar
-                                        data ={{labels: ['Mortgage Insurance', 'Savings Insurance', 'Pension Insurance', 'Child Insurance', 'Retirement Care Insurance'],
-                                                datasets: [{data: [40, 6, 5, 6, 7],
+                                        labels = {"asfdsaf"}
+                                        data = {{labels: [t('product.1'), t('product.2'), t('product.3'), t('product.4'), t('product.5')],
+                                                datasets: [{data: [40, 21, 5, 6, 7],
                                                             backgroundColor: ['#00A6FF', '#28A745', '#DC3545', '#FFC107', '#8107FF']}]}}
-                                        options={{maintainAspectRatio: false, cutout: 70, 
-                                                  animation: {
-                                                      duration: 0
-                                                  }}}
+                                        options = {{ plugins: {
+                                                        legend: {
+                                                            display: false
+                                                        }
+                                                    }
+                                                  }}
                                         />
                                     </th>
                                 </tr>

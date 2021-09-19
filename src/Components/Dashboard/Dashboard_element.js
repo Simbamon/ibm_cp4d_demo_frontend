@@ -52,7 +52,7 @@ export const TopFive = styled.div `
 
 
 export const DashboardTable = styled.div`
-    flex: 1 1 75%;
+    flex: 1 1 65%;
     margin : 10px;
     border-radius: 10px;
     white-space: nowrap;
