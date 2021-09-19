@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
 
 export const Nav = styled.nav`
     background: white;
@@ -9,7 +8,7 @@ export const Nav = styled.nav`
     z-index: 10;
 `
 
-export const NavLink = styled(Link) `
+export const NavLink = styled.div `
     color: black;
     display: flex;
     align-items: center;

@@ -4,7 +4,8 @@ import { DashboardWrap, DashboardTitle, BoxInfo, BoxItem, BoxTrend, TopFive, Das
 import { ArrowDownward, ArrowUpward, Person, ShowChart, QuestionAnswer, Assignment } from '@material-ui/icons'
 import { withTranslation } from 'react-i18next';
 import { FiberManualRecord, Stop } from '@material-ui/icons'
-import { Doughnut, Bar } from 'react-chartjs-2'
+import { Doughnut, Bar, Radar } from 'react-chartjs-2'
+import CountUp from 'react-countup'
 import Client1KR from '../../images/client1KR.jpg';
 import Client2KR from '../../images/client2KR.jpg';
 import Client3KR from '../../images/client3KR.jpg';
@@ -35,7 +36,14 @@ export class Dashboard extends Component {
                             <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
                                 <div style={{margin: "0 0 0 5px"}}>
                                     <p style={{fontSize: "0.85rem", color: "grey"}}>{t('dashboard.1')}</p>
-                                    <h1 style={{fontSize: "1.7rem", margin: "7px 0px 7px 0px"}}>8,764</h1>
+                                    <h1 style={{fontSize: "1.7rem", margin: "7px 0px 7px 0px"}}>
+                                        <CountUp 
+                                            start={8764*0.75}
+                                            end={8764}
+                                            duration ={0.9}
+                                            separator=","
+                                        />
+                                    </h1>
                                     <div style={{display: "flex", alignItems: "center"}}>
                                         <BoxTrend style={{backgroundColor: "lightblue"}}>
                                             <p style={{fontSize: "0.6rem", color: "blue", marginLeft: "2px"}}>15.3%</p>
@@ -54,7 +62,15 @@ export class Dashboard extends Component {
                             <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
                                 <div style={{margin: "0 0 0 5px"}}>
                                     <p style={{fontSize: "0.85rem", color: "grey"}}>{t('dashboard.2')}</p>
-                                    <h1 style={{fontSize: "1.7rem", margin: "7px 0px 7px 0px"}}>{t('dashboard.5')}</h1>
+                                    <h1 style={{fontSize: "1.7rem", margin: "7px 0px 7px 0px"}}>
+                                        {t('dashboard.5-1')}
+                                        <CountUp 
+                                            start={t('dashboard.5')*0.75}
+                                            end={t('dashboard.5')}
+                                            duration ={0.9}
+                                            separator=","
+                                        />
+                                        </h1>
                                     <div style={{display: "flex", alignItems: "center"}}>
                                         <BoxTrend style={{backgroundColor: "lightblue"}}>
                                             <p style={{fontSize: "0.6rem", color: "blue", marginLeft: "2px"}}>8.61%</p>
@@ -73,7 +89,14 @@ export class Dashboard extends Component {
                             <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
                                 <div style={{margin: "0 0 0 5px"}}>
                                     <p style={{fontSize: "0.85rem", color: "grey"}}>{t('dashboard.3')}</p>
-                                    <h1 style={{fontSize: "1.7rem", margin: "7px 0px 7px 0px"}}>122</h1>
+                                    <h1 style={{fontSize: "1.7rem", margin: "7px 0px 7px 0px"}}>
+                                        <CountUp 
+                                            start={122*0.75}
+                                            end={122}
+                                            duration ={0.9}
+                                            separator=","
+                                        />
+                                    </h1>
                                     <div style={{display: "flex", alignItems: "center"}}>
                                         <BoxTrend style={{backgroundColor: "pink"}}>
                                             <p style={{fontSize: "0.6rem", color: "red", marginLeft: "2px"}}>3.57%</p>
@@ -91,7 +114,14 @@ export class Dashboard extends Component {
                             <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
                                 <div style={{margin: "0 0 0 5px"}}>
                                     <p style={{fontSize: "0.85rem", color: "grey"}}>{t('dashboard.4')}</p>
-                                    <h1 style={{fontSize: "1.7rem", margin: "7px 0px 7px 0px"}}>1,521</h1>
+                                    <h1 style={{fontSize: "1.7rem", margin: "7px 0px 7px 0px"}}>
+                                        <CountUp 
+                                            start={1521*0.75}
+                                            end={1521}
+                                            duration ={0.9}
+                                            separator=","
+                                        />
+                                    </h1>
                                     <div style={{display: "flex", alignItems: "center"}}>
                                         <BoxTrend style={{backgroundColor: "lightblue"}}>
                                             <p style={{fontSize: "0.6rem", color: "blue", marginLeft: "2px"}}>12.9%</p>
@@ -264,11 +294,11 @@ export class Dashboard extends Component {
                                                 datasets: [{data: [10, 6, 5, 6, 7],
                                                 backgroundColor: ['#00A6FF', '#28A745', '#DC3545', '#FFC107', '#8107FF']}]}}
                                         options={{plugins: {
-                                            legend: {
-                                                display: false
-                                            }
-                                        },
-                                        maintainAspectRatio: false, cutout: 70}}
+                                                        legend: {
+                                                            display: false
+                                                        }
+                                                    },
+                                                maintainAspectRatio: false, cutout: 70}}
                                         />
                                     </th>
                                 </tr>
@@ -346,13 +376,12 @@ export class Dashboard extends Component {
                     <Graphs>
                         <BarGraph>
                             <thead>
-                                <caption>{t('piechart.1')}</caption>
+                                <caption>{t('charts.1')}</caption>
                                 <tr>
                                     <th>
                                     <Bar
-                                        labels = {"asfdsaf"}
                                         data = {{labels: [t('product.1'), t('product.2'), t('product.3'), t('product.4'), t('product.5')],
-                                                datasets: [{data: [40, 21, 5, 6, 7],
+                                                datasets: [{data: [402, 404, 354, 590, 594],
                                                             backgroundColor: ['#00A6FF', '#28A745', '#DC3545', '#FFC107', '#8107FF']}]}}
                                         options = {{ plugins: {
                                                         legend: {
@@ -367,13 +396,19 @@ export class Dashboard extends Component {
                         </BarGraph>
                         <BarGraph>
                             <thead>
-                                <caption>{t('piechart.1')}</caption>
+                                <caption>{t('charts.2')}</caption>
                                 <tr>
                                     <th>
-                                    <Doughnut
-                                        data ={{datasets: [{data: [10, 6, 5, 6, 7],
-                                                            backgroundColor: ['#00A6FF', '#28A745', '#DC3545', '#FFC107', '#8107FF']}]}}
-                                        options={{maintainAspectRatio: false, cutout: 70}}
+                                    <Radar
+                                        data ={{labels: [t('product.1'), t('product.2'), t('product.3'), t('product.4'), t('product.5')],
+                                                datasets: [{data: [38, 63, 27, 85, 72],
+                                                            }]}}
+                                        options={{plugins: {
+                                            legend: {
+                                                display: false
+                                            }
+                                        },
+                                            maintainAspectRatio: false}}
                                         />
                                     </th>
                                 </tr>
@@ -381,7 +416,7 @@ export class Dashboard extends Component {
                         </BarGraph>
                         <BarGraph>
                             <thead>
-                                <caption>{t('piechart.1')}</caption>
+                                <caption>{t('charts.3')}</caption>
                                 <tr>
                                     <th>
                                     <Doughnut

@@ -52,7 +52,7 @@ export const TopFive = styled.div `
 
 
 export const DashboardTable = styled.div`
-    flex: 1 1 65%;
+    flex: 1 1 70%;
     margin : 10px;
     border-radius: 10px;
     white-space: nowrap;
@@ -170,6 +170,7 @@ export const PieChart = styled.div`
     text-align: left;
     font-size: 0.85rem;
     height: 100%;
+    min-height: 366.51px;
     width: 100%;
     display: table;
     table-layout: fixed;
@@ -217,6 +218,7 @@ export const BarGraph = styled.div`
     text-align: left;
     font-size: 0.85rem;
     height: 100%;
+    min-height: 270px;
     width: 100%;
     display: table;
     table-layout: fixed;

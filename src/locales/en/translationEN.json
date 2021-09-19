@@ -13,7 +13,8 @@
         "2": "Total Revenue",
         "3": "Potential Offers",
         "4": "Total Sales",
-        "5": "$30,217",
+        "5-1": "$",
+        "5": 30217,
         "6": "compared to last month"
     },
     "table": {
@@ -48,20 +49,16 @@
         "5": "Retirement Care Insurance"
     },
     "piechart": {
-        "1": "Total Sales Revenue by Products",
+        "1": "Total Revenue by Products",
         "2": "$321",
         "3": "$295",
         "4": "$227",
         "5": "$258",
         "6": "$303"
     },
-    "days": {
-        "sun": "Sun",
-        "mon": "Mon",
-        "tue": "Tue",
-        "wed": "Wed",
-        "thu": "Thur",
-        "fri": "Fri",
-        "sat": "Sat"
-      }
+    "charts": {
+        "1": "Number of Offers",
+        "2": "% of Products Purchased",
+        "3": "Product Offer Opportunity"
+    }
 }
