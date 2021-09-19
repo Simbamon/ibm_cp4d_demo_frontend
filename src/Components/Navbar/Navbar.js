@@ -2,18 +2,31 @@ import React, { Component } from 'react'
 import {Nav, NavLink, NavMenu, ProfilePic, Profile, ProfileName} from './Navbar_element'
 import { Email, NotificationsNoneOutlined, ExpandMore, Search } from '@material-ui/icons'
 import { withTranslation } from 'react-i18next';
+import i18next from 'i18next';
 
 
 export class Navbar extends Component {
     render() {
         const { t } = this.props; 
+
+        const onChange = (event) =>{
+            i18next.changeLanguage(event.target.value)
+        }
+
         return (
             <>
                 <Nav>
                     <NavLink to="/dashboard">
-                        <h1>TITLE</h1>
+                        <h1>IBM Customer Offer Affinity</h1>
                     </NavLink>
                     <NavMenu>
+                        <NavLink>
+                            <select name="language" onChange={onChange}>
+                                <option value=""></option>
+                                <option value="en">english</option>
+                                <option value="ko">한국어</option>
+                            </select>
+                        </NavLink>
                         <NavLink>
                             <Search style = {{fontSize: "1.35rem"}}/>
                         </NavLink>

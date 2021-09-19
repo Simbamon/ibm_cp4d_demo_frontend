@@ -4,7 +4,7 @@ import { DashboardWrap, DashboardTitle, BoxInfo, BoxItem, BoxTrend, TopFive, Das
 import { ArrowDownward, ArrowUpward, Person, ShowChart, QuestionAnswer, Assignment } from '@material-ui/icons'
 import { withTranslation } from 'react-i18next';
 import { FiberManualRecord, Stop } from '@material-ui/icons'
-import { Doughnut } from 'react-chartjs-2'
+import { Doughnut, Bar } from 'react-chartjs-2'
 import Client1KR from '../../images/client1KR.jpg';
 import Client2KR from '../../images/client2KR.jpg';
 import Client3KR from '../../images/client3KR.jpg';
@@ -343,10 +343,14 @@ export class Dashboard extends Component {
                                 <caption>{t('piechart.1')}</caption>
                                 <tr>
                                     <th>
-                                    <Doughnut
-                                        data ={{datasets: [{data: [10, 6, 5, 6, 7],
+                                    <Bar
+                                        data ={{labels: ['Mortgage Insurance', 'Savings Insurance', 'Pension Insurance', 'Child Insurance', 'Retirement Care Insurance'],
+                                                datasets: [{data: [40, 6, 5, 6, 7],
                                                             backgroundColor: ['#00A6FF', '#28A745', '#DC3545', '#FFC107', '#8107FF']}]}}
-                                        options={{maintainAspectRatio: false, cutout: 70}}
+                                        options={{maintainAspectRatio: false, cutout: 70, 
+                                                  animation: {
+                                                      duration: 0
+                                                  }}}
                                         />
                                     </th>
                                 </tr>
