@@ -44,3 +44,8 @@ export const ProfileName = styled.div`
     vertical-align: middle;
     display: table;
 `
+
+export const LanguageBox = styled.select`
+    width: 6.5em;
+    height: 1.8em;
+`

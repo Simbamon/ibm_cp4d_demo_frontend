@@ -11,6 +11,7 @@ export const DashboardTitle = styled.div`
     padding: 10px;
     font-size: 1.7rem;
     font-weight: bold;
+    line-height: 1.7rem;
 `
 
 export const BoxInfo = styled.div`
@@ -51,7 +52,7 @@ export const TopFive = styled.div `
 `
 
 
-export const DashboardTable = styled.div`
+export const DashboardTable = styled.table`
     flex: 1 1 70%;
     margin : 10px;
     border-radius: 10px;
@@ -158,7 +159,7 @@ export const Predict = styled.div`
     
 `
 
-export const PieChart = styled.div`
+export const PieChart = styled.table`
     flex: 1 1 20%;
     margin: 10px;
     border-radius: 10px;
@@ -170,7 +171,6 @@ export const PieChart = styled.div`
     text-align: left;
     font-size: 0.85rem;
     height: 100%;
-    min-height: 366.51px;
     width: 100%;
     display: table;
     table-layout: fixed;
@@ -186,13 +186,13 @@ export const PieChart = styled.div`
     }
     th {
         padding: 5px 20px;
-        height: 210px;
+        height: 190px;
     }
     td  {
         display: flex;
         justify-content: space-between;
-        padding: 2px 20px;
-        line-height: 1rem;
+        padding: 1px 20px;
+        line-height: 0.8rem;
     }
 `
 
@@ -206,8 +206,8 @@ export const Graphs = styled.div `
     margin-top: 10px;
 `
 
-export const BarGraph = styled.div`
-    flex: 1 1 27%;
+export const BarGraph = styled.table`
+    flex: 1 1 32%;
     margin: 10px;
     border-radius: 10px;
     white-space: nowrap;
@@ -218,7 +218,7 @@ export const BarGraph = styled.div`
     text-align: left;
     font-size: 0.85rem;
     height: 100%;
-    min-height: 270px;
+    min-height: 300px;
     width: 100%;
     display: table;
     table-layout: fixed;
@@ -239,7 +239,13 @@ export const BarGraph = styled.div`
     td  {
         display: flex;
         justify-content: space-between;
-        padding: 2px 20px;
+        padding: 15px 20px;
         line-height: 1rem;
     }
+`
+
+export const Potential = styled.p`
+    font-size: 0.9rem;
+    color: #5F9AAE;
+    font-weight: bold;
 `

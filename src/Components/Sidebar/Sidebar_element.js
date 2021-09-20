@@ -4,6 +4,10 @@ export const SideBar = styled.div`
     min-height: calc(100vh - 50px);
     height: 100%;
     width: 200px;
+
+    @media screen and (max-width: 991px) {
+        display: none;
+    }
 `
 
 export const SidebarWrapper = styled.div `

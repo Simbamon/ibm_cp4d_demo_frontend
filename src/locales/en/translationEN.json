@@ -42,7 +42,7 @@
         "5e": "burkholder939@gmail.com"
     },
     "product": {
-        "1": "Mortgage",
+        "1": "Mortgage Insurance",
         "2": "Savings Insurance",
         "3": "Pension Insurance",
         "4": "Child Insurance",
@@ -59,6 +59,11 @@
     "charts": {
         "1": "Number of Offers",
         "2": "% of Products Purchased",
-        "3": "Product Offer Opportunity"
+        "3": "Product Offer Opportunity",
+        "4": "3 Potential Client(s)",
+        "5": "6 Potential Client(s)",
+        "6": "1 Potential Client(s)",
+        "7": "8 Potential Client(s)",
+        "8": "11 Potential Client(s)"
     }
 }

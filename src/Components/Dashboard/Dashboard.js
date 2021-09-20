@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { DashboardWrap, DashboardTitle, BoxInfo, BoxItem, BoxTrend, TopFive, DashboardTable, 
-         Client, ClientPic, ClientName, Purchase, Predict, PieChart, Graphs, BarGraph } from './Dashboard_element'
+         Client, ClientPic, ClientName, Purchase, Predict, PieChart, Graphs, BarGraph, Potential } from './Dashboard_element'
 import { ArrowDownward, ArrowUpward, Person, ShowChart, QuestionAnswer, Assignment } from '@material-ui/icons'
 import { withTranslation } from 'react-i18next';
 import { FiberManualRecord, Stop } from '@material-ui/icons'
-import { Doughnut, Bar, Radar } from 'react-chartjs-2'
+import { Doughnut, Bar } from 'react-chartjs-2'
+import { Link } from 'react-router-dom'
 import CountUp from 'react-countup'
 import Client1KR from '../../images/client1KR.jpg';
 import Client2KR from '../../images/client2KR.jpg';
@@ -35,7 +36,7 @@ export class Dashboard extends Component {
                         <BoxItem>
                             <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
                                 <div style={{margin: "0 0 0 5px"}}>
-                                    <p style={{fontSize: "0.85rem", color: "grey"}}>{t('dashboard.1')}</p>
+                                    <p style={{fontSize: "0.85rem", color: "grey", lineHeight: "0.85rem"}}>{t('dashboard.1')}</p>
                                     <h1 style={{fontSize: "1.7rem", margin: "7px 0px 7px 0px"}}>
                                         <CountUp 
                                             start={8764*0.75}
@@ -61,7 +62,7 @@ export class Dashboard extends Component {
                         <BoxItem>
                             <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
                                 <div style={{margin: "0 0 0 5px"}}>
-                                    <p style={{fontSize: "0.85rem", color: "grey"}}>{t('dashboard.2')}</p>
+                                    <p style={{fontSize: "0.85rem", color: "grey", lineHeight: "0.85rem"}}>{t('dashboard.2')}</p>
                                     <h1 style={{fontSize: "1.7rem", margin: "7px 0px 7px 0px"}}>
                                         {t('dashboard.5-1')}
                                         <CountUp 
@@ -88,7 +89,7 @@ export class Dashboard extends Component {
                         <BoxItem>
                             <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
                                 <div style={{margin: "0 0 0 5px"}}>
-                                    <p style={{fontSize: "0.85rem", color: "grey"}}>{t('dashboard.3')}</p>
+                                    <p style={{fontSize: "0.85rem", color: "grey", lineHeight: "0.85rem"}}>{t('dashboard.3')}</p>
                                     <h1 style={{fontSize: "1.7rem", margin: "7px 0px 7px 0px"}}>
                                         <CountUp 
                                             start={122*0.75}
@@ -113,7 +114,7 @@ export class Dashboard extends Component {
                         <BoxItem>
                             <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
                                 <div style={{margin: "0 0 0 5px"}}>
-                                    <p style={{fontSize: "0.85rem", color: "grey"}}>{t('dashboard.4')}</p>
+                                    <p style={{fontSize: "0.85rem", color: "grey", lineHeight: "0.85rem"}}>{t('dashboard.4')}</p>
                                     <h1 style={{fontSize: "1.7rem", margin: "7px 0px 7px 0px"}}>
                                         <CountUp 
                                             start={1521*0.75}
@@ -174,7 +175,9 @@ export class Dashboard extends Component {
                                         </Purchase>
                                     </td>
                                     <td>
+                                        <Link to="/prediction" style={{ textDecoration: 'none' }}>
                                         <Predict>{t('table.10')}</Predict>
+                                        </Link>
                                     </td>
                                 </tr>
                                 <tr>
@@ -200,7 +203,9 @@ export class Dashboard extends Component {
                                         </Purchase>
                                     </td>
                                     <td>
+                                        <Link to="/prediction" style={{ textDecoration: 'none' }}>
                                         <Predict>{t('table.10')}</Predict>
+                                        </Link>
                                     </td>
                                 </tr>
                                 <tr>
@@ -226,7 +231,9 @@ export class Dashboard extends Component {
                                         </Purchase>
                                     </td>
                                     <td>
+                                        <Link to="/prediction" style={{ textDecoration: 'none' }}>
                                         <Predict>{t('table.10')}</Predict>
+                                        </Link>
                                     </td>
                                 </tr>
                                 <tr>
@@ -252,7 +259,9 @@ export class Dashboard extends Component {
                                         </Purchase>
                                     </td>
                                     <td>
+                                        <Link to="/prediction" style={{ textDecoration: 'none' }}>
                                         <Predict>{t('table.10')}</Predict>
+                                        </Link>
                                     </td>
                                 </tr>
                                 <tr>
@@ -278,7 +287,9 @@ export class Dashboard extends Component {
                                         </Purchase>
                                     </td>
                                     <td>
+                                        <Link to="/prediction" style={{ textDecoration: 'none' }}>
                                         <Predict>{t('table.10')}</Predict>
+                                        </Link>
                                     </td>
                                 </tr>
                             </tbody>
@@ -297,8 +308,8 @@ export class Dashboard extends Component {
                                                         legend: {
                                                             display: false
                                                         }
-                                                    },
-                                                maintainAspectRatio: false, cutout: 70}}
+                                                  },
+                                                  maintainAspectRatio: false, cutout: 70}}
                                         />
                                     </th>
                                 </tr>
@@ -382,10 +393,16 @@ export class Dashboard extends Component {
                                     <Bar
                                         data = {{labels: [t('product.1'), t('product.2'), t('product.3'), t('product.4'), t('product.5')],
                                                 datasets: [{data: [402, 404, 354, 590, 594],
-                                                            backgroundColor: ['#00A6FF', '#28A745', '#DC3545', '#FFC107', '#8107FF']}]}}
+                                                            barThickness: 40,
+                                                            backgroundColor: ['#00A6FF']}]}}
                                         options = {{ plugins: {
                                                         legend: {
                                                             display: false
+                                                        }
+                                                    },
+                                                    scales: {
+                                                        y: {
+                                                            suggestedMax: 700
                                                         }
                                                     }
                                                   }}
@@ -399,16 +416,37 @@ export class Dashboard extends Component {
                                 <caption>{t('charts.2')}</caption>
                                 <tr>
                                     <th>
-                                    <Radar
-                                        data ={{labels: [t('product.1'), t('product.2'), t('product.3'), t('product.4'), t('product.5')],
+                                    <Bar
+                                        data = {{labels: [t('product.1'), t('product.2'), t('product.3'), t('product.4'), t('product.5')],
                                                 datasets: [{data: [38, 63, 27, 85, 72],
-                                                            }]}}
-                                        options={{plugins: {
-                                            legend: {
-                                                display: false
-                                            }
-                                        },
-                                            maintainAspectRatio: false}}
+                                                            barThickness: 40,
+                                                            backgroundColor: ['#FFC107']}]}}
+                                        options = {{ plugins: {
+                                                        legend: {
+                                                            display: false
+                                                        },
+                                                        tooltip: {
+                                                            callbacks: {
+                                                                label: function(context) {
+                                                                    var label = context.dataset.label || '';
+                                                                    label += new Intl.NumberFormat('en-US', { style: 'percent' }).format(context.parsed.y/100);
+                                                                    return label;
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    scales: {
+                                                        y: {
+                                                            suggestedMax: 100,
+                                                            ticks: {
+                                                               callback: function(value) {
+                                                                 return value+"%"
+                                                               }
+                                                            }
+                                                        }
+                                                    }
+                                                  }}
+                                        labels = {{ render: 'value'}}
                                         />
                                     </th>
                                 </tr>
@@ -417,16 +455,40 @@ export class Dashboard extends Component {
                         <BarGraph>
                             <thead>
                                 <caption>{t('charts.3')}</caption>
-                                <tr>
-                                    <th>
-                                    <Doughnut
-                                        data ={{datasets: [{data: [10, 6, 5, 6, 7],
-                                                            backgroundColor: ['#00A6FF', '#28A745', '#DC3545', '#FFC107', '#8107FF']}]}}
-                                        options={{maintainAspectRatio: false, cutout: 70}}
-                                        />
-                                    </th>
-                                </tr>
                             </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p>{t('product.1')}</p>
+                                        <Potential>{t('charts.4')}</Potential>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                       {t('product.2')}
+                                       <Potential>{t('charts.5')}</Potential>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        {t('product.3')}
+                                        <Potential>{t('charts.6')}</Potential>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        {t('product.4')}
+                                        <Potential>{t('charts.7')}</Potential>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        {t('product.5')}
+                                        <Potential>{t('charts.8')}</Potential>
+                                    </td>
+                                </tr>
+                              
+                            </tbody>
                         </BarGraph>
                     </Graphs>
             </DashboardWrap>
