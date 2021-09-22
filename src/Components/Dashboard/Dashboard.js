@@ -175,7 +175,7 @@ export class Dashboard extends Component {
                                         </Purchase>
                                     </td>
                                     <td>
-                                        <Link to="/prediction" style={{ textDecoration: 'none' }}>
+                                        <Link to="dashboard/prediction/1024" style={{ textDecoration: 'none' }}>
                                         <Predict>{t('table.10')}</Predict>
                                         </Link>
                                     </td>
