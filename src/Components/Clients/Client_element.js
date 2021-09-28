@@ -24,7 +24,7 @@ export const ClientBoxWrapper = styled.div`
 `
 
 export const ClientBox = styled.div`
-    flex: 1;
+    flex: 1 1 calc(50% - 50px);
     margin : 10px;
     padding: 15px;
     height: 100%;
@@ -32,19 +32,21 @@ export const ClientBox = styled.div`
     white-space: nowrap;
     background-color: white;
     box-shadow: 13px 15px 55px -13px rgba(0,0,0,0.36);
+    
 `
 
 export const Client = styled.div`
     display: flex;
-    
+    justify-content: center;
+    text-align: center;
 `
 
 export const ClientPic = styled.div`
     background-image: url(${props => props.img});
     background-size: cover;
-    width: 150px;
-    border-radius: 10%;
-    height: 150px;
+    width: 200px;
+    border-radius: 5%;
+    height: 200px;
     text-decoration: none;
- 
+    margin: 0 auto;
 `
