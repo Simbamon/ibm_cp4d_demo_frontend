@@ -35,6 +35,7 @@ export const ProfilePic = styled.div`
 
 export const SidebarTitle = styled.p `
     font-size: 0.7rem;
+    line-height: 0.7rem;
     margin-top: 25px;
     margin-bottom: 5px;
 `
@@ -43,6 +44,7 @@ export const SidebarList = styled.ul `
     list-style: none;
     cursor: pointer;
     font-size: 0.7rem;
+    line-height: 0.7rem;
     margin-left: -20px;
     margin-right: -20px;
     margin-top: 20px;

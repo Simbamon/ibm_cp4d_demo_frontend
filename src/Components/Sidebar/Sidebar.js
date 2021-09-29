@@ -16,8 +16,8 @@ export class Sidebar extends Component {
                                     <ProfilePic img = {require('../../images/profile_pic.png').default} alt='profile photo'></ProfilePic>
                                 </div>
                                 <div style={{paddingTop: "5px", paddingBottom: "15px", textAlign: "center" }}>
-                                    <p style={{color: "white", fontSize: "0.8rem", marginBottom:"2px"}}>{t('navbar.1')}</p>
-                                    <p style={{color: "#c5c7c9", fontSize: "0.6rem"}}>{t('sidebar.4')}</p>
+                                    <p style={{color: "white", fontSize: "0.8rem", marginBottom:"2px", lineHeight: "1.0rem"}}>{t('navbar.1')}</p>
+                                    <p style={{color: "#c5c7c9", fontSize: "0.6rem", lineHeight: "0.8rem"}}>{t('sidebar.4')}</p>
                                 </div>
                                 
                             </ProfileSection>

@@ -65,5 +65,22 @@
         "6": "1 Potential Client(s)",
         "7": "8 Potential Client(s)",
         "8": "11 Potential Client(s)"
+    },
+    "clientInfo": {
+        "1": "Personal Information",
+        "2": "Customer ID:",
+        "3": "Age:",
+        "4": "Marital Status:",
+        "5": "Address:",
+        "6": "Profession:",
+        "7": "Level of Education",
+        "8": "Preferred form of Communication",
+        "9": "Financial Profile",
+        "10": "Annual Income:",
+        "11": "Home Owner:",
+        "12": "Monthly Housing:",
+        "13": "Credit Score:",
+        "14": "Credit Authority Level:",
+        "15": "Customer Pursuit:"
     }
 }
