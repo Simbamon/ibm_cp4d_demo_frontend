@@ -207,7 +207,7 @@ export const Graphs = styled.div `
 `
 
 export const BarGraph = styled.table`
-    flex: 1 1 32%;
+    flex: 1 1 calc(33% - 20px);
     margin: 10px;
     border-radius: 10px;
     white-space: nowrap;
