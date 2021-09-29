@@ -24,7 +24,7 @@ export const ClientBoxWrapper = styled.div`
 `
 
 export const ClientBox = styled.div`
-    flex: 1 1 calc(50% - 50px);
+    flex: 1 1 calc(25% - 50px);
     margin : 10px;
     padding: 15px;
     height: 100%;
@@ -49,4 +49,53 @@ export const ClientPic = styled.div`
     height: 200px;
     text-decoration: none;
     margin: 0 auto;
+`
+
+export const ClientInfo = styled.table`
+    border-radius: 10px;
+    white-space: nowrap;
+    background-color: white;
+    text-align: left;
+    font-size: 0.85rem;
+    width: 100%;
+    table-layout: fixed;
+    display: table;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    border-collapse: collapse;
+    overflow-x:auto;
+    /* box-shadow: 13px 15px 55px -13px rgba(0,0,0,0.36); */
+
+    caption {
+        display: inline;
+        font-size: 1.1rem;
+        font-weight: bold;
+        padding: 5px 0 5px 20px;
+        line-height: 45px;
+        
+    }
+
+    tbody tr td:first-child {
+        text-align: left;
+    }
+    tbody tr td:nth-child(2) {
+        text-align: right;
+    }
+    td  {
+        padding: 3px 20px;
+        height: 100%;
+        
+    }
+    
+`
+export const ClientBox2 = styled.div`
+    flex: 1 1 calc(75% - 50px);
+    margin : 10px;
+    padding: 15px;
+    height: 100%;
+    border-radius: 10px;
+    white-space: nowrap;
+    background-color: white;
+    box-shadow: 13px 15px 55px -13px rgba(0,0,0,0.36);
+    
 `

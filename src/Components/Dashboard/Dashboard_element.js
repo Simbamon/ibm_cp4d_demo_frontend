@@ -53,7 +53,7 @@ export const TopFive = styled.div `
 
 
 export const DashboardTable = styled.table`
-    flex: 1 1 70%;
+    flex: 1 1 calc(75% - 20px);
     margin : 10px;
     border-radius: 10px;
     white-space: nowrap;
@@ -160,7 +160,7 @@ export const Predict = styled.div`
 `
 
 export const PieChart = styled.table`
-    flex: 1 1 20%;
+    flex: 1 1 calc(25% - 20px);
     margin: 10px;
     border-radius: 10px;
     white-space: nowrap;
