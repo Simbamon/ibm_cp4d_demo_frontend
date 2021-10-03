@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
-import { ClientWrap, ClientTitle, ClientBoxWrapper, ClientBox, Client, ClientPic, ClientName, ClientInfo, ClientBox2 } from './Client_element'
+import { ClientWrap, ClientTitle, ClientBoxWrapper, ClientBox, Client, ClientPic, ClientName, ClientInfo, ClientBox2, PieChart } from './Client_element'
 import { withTranslation } from 'react-i18next';
 import Client1KR from '../../images/client1KR.jpg';
 import Client1EN from '../../images/client1EN.jpg';
+import { Bar } from 'react-chartjs-2'
 
 export class Client1 extends Component {
     render() {
 
         const { t } = this.props;
-
+        
         return (
             <>
                 <ClientWrap>
@@ -96,7 +97,51 @@ export class Client1 extends Component {
                             </Client>
                         </ClientBox>
                         <ClientBox2>
-                            asdfdsaf
+                        <PieChart>
+                        <thead>
+                                <caption>{t('piechart.1')}</caption>
+                                <tr>
+                                    <th>
+                                    <Bar
+                                        data = {{labels: [t('product.1'), t('product.2'), t('product.3'), t('product.4'), t('product.5')],
+                                        datasets: [{data: [91, 87, 65, 31, 22],
+                                                        barThickness: 40,
+                                                        backgroundColor: ['#00A6FF']}]}}
+                                        options = {{
+                                                    plugins: {
+                                                        legend: {
+                                                            display: false
+                                                        },
+                                                        tooltip: {
+                                                            callbacks: {
+                                                                label: function(context) {
+                                                                    var label = context.dataset.label || '';
+                                                                    label += new Intl.NumberFormat('en-US', { style: 'percent' }).format(context.parsed.x/100);
+                                                                    return label;
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    indexAxis: 'y',
+                                                    scales: {
+                                                        x: {
+                                                            suggestedMax: 100,
+                                                            ticks: {
+                                                                callback: function(value) {
+                                                                    return value+"%"
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    }}
+                                        labels = {{ render: 'value'}}
+                                        />
+                                    </th>
+                                </tr>
+                        </thead>
+                        </PieChart>
+                        
+                        
                         </ClientBox2>
                     </ClientBoxWrapper>
                 </ClientWrap>
