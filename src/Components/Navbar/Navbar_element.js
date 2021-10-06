@@ -21,6 +21,9 @@ export const NavLink = styled.div `
 export const NavMenu = styled.div`
     display: flex;
     align-items: center;
+    @media screen and (max-width: 991px) {
+        display: none;
+    }
 `
 
 export const Profile = styled.div`

@@ -99,7 +99,7 @@ export class Client1 extends Component {
                         <ClientBox2>
                         <PieChart>
                         <thead>
-                                <caption>{t('piechart.1')}</caption>
+                                <caption>제품 추천</caption>
                                 <tr>
                                     <th>
                                     <Bar

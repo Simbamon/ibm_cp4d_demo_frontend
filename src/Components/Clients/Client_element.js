@@ -46,7 +46,7 @@ export const ClientPic = styled.div`
     background-image: url(${props => props.img});
     background-size: cover;
     width: 200px;
-    border-radius: 50%;
+    border-radius: 15%;
     height: 200px;
     text-decoration: none;
     margin: 5px auto;
