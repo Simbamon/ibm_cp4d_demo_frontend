@@ -6,7 +6,7 @@ export class Prediction extends Component {
         const test = await fetch('/token')
         const resp = await test.json()
         const cp4d_token = resp.access_token
-        const data = { token: cp4d_token, url: "https://us-south.ml.cloud.ibm.com/ml/v4/deployments/a3a29977-82b2-4c9f-b7b3-a1db7d7e724a/predictions?version=2021-02-15" }
+        const data = { token: cp4d_token, url: "https://us-south.ml.cloud.ibm.com/ml/v4/deployments/a7d2373c-7141-42c0-93e1-07b11cc1bec3/predictions?version=2021-10-11" }
 
         const options = {
             method: 'POST',
